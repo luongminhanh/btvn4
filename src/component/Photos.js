@@ -22,7 +22,7 @@ function Photos() {
     }, [])
 
     return (
-        <div>
+        <div className='bg-black'>
             <div className='list-images grid grid-cols-4 gap-5 w-[100%] mt-10'>
                 {images.length ?
                     images.map((image) => {
