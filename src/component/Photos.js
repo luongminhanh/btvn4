@@ -17,11 +17,16 @@ function Photos() {
         }
     }
     const handleLoadMorePhotos = async () => {
+        try {
         const photos = await getMorePhotos(page);
         console.log(photos);
         const newPhotos = [...images, ...photos];
         setImages(newPhotos);
         setPage(page + 1);
+        }
+        catch (error) {
+            console.log(error);
+        }
     }
 
     useEffect(() => {
